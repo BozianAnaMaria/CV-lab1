@@ -20,22 +20,23 @@ nume utilizator: user;
 parola utilizator: password.
 ![photo_5285496809155849133_y](https://github.com/user-attachments/assets/eb885f58-3569-4e43-b059-338e2b9eecb4)
 ![photo_5285496809155849116_y](https://github.com/user-attachments/assets/a8ade105-5077-4db9-8698-a60ce9db0779)
+Aici selectam ultimele 2 optiuni.
 ![Screenshot 2025-02-09 184301](https://github.com/user-attachments/assets/f08629d7-780f-49aa-9dd7-e66cdddcbb3a)
-6. dupa instalare, repornim masina virtuala folosind comanda:
+7. dupa instalare, repornim masina virtuala folosind comanda:
 qemu-system-x86_64 -hda debian.qcow2 -m 2G -smp 2 -device e1000,netdev=net0 -netdev user,id=net0,hostfwd=tcp::1080-:80,hostfwd=tcp::1022-:22
-7. Instalam LAMP in masina virtuala. pentru a face asta folosim comanda su ca sa avem drepturi de superutilizator si dupa comenzile:
+8. Instalam LAMP in masina virtuala. pentru a face asta folosim comanda su ca sa avem drepturi de superutilizator si dupa comenzile:
 apt update -y
 apt install -y apache2 php libapache2-mod-php php-mysql mariadb-server mariadb-client unzip
 ![Screenshot 2025-02-11 142311](https://github.com/user-attachments/assets/55f2c9d7-c635-4cbd-afbd-b54012f9a2b7)
 Destinatia pachetelor instalate este in /etc pentru configurari. exemplu: /etc/apache2/, /etc/php/, /etc/mysql/. aceste locatii sunt standard in utilizeazarea managerul de pachete apt.
-8. Descarcarea SGBD phpmyadmin si CMS drupal cu ajutorul la wget + link.
+9. Descarcarea SGBD phpmyadmin si CMS drupal cu ajutorul la wget + link.
 ![Screenshot 2025-02-11 144229](https://github.com/user-attachments/assets/0e9589bf-a26b-47f3-a0b0-93824939d186)
-9. dezarhivam fisierele descarcate follosind conditiile din lucrare.
-10. Cream baza de date drupal. ![Screenshot 2025-02-13 112312](https://github.com/user-attachments/assets/e8e0a1ed-214b-4b69-8ca8-6f1df16b62d5)
-11. pentru phpmyadmin si drupal creem fisiere de configurare unde sunt introduse date despre host-uri virtuale. si activam configuratia utilizand comenzile:
+10. dezarhivam fisierele descarcate follosind conditiile din lucrare.
+11. Cream baza de date drupal. ![Screenshot 2025-02-13 112312](https://github.com/user-attachments/assets/e8e0a1ed-214b-4b69-8ca8-6f1df16b62d5)
+12. pentru phpmyadmin si drupal creem fisiere de configurare unde sunt introduse date despre host-uri virtuale. si activam configuratia utilizand comenzile:
 /usr/sbin/a2ensite 01-phpmyadmin
 /usr/sbin/a2ensite 02-drupal
-12. facem un reload la apache2 si dupa adaugam adesele IP in /etc/hosts.
+13. facem un reload la apache2 si dupa adaugam adesele IP in /etc/hosts.
 ![Screenshot 2025-02-13 131508](https://github.com/user-attachments/assets/4b86e601-ac84-401a-a3a7-99b111fc10d3)
 ![Screenshot 2025-02-13 131002](https://github.com/user-attachments/assets/796fb202-0f56-419e-aac4-c0766aabb6c8)
 
