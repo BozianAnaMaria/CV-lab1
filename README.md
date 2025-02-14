@@ -45,7 +45,8 @@ Destinatia pachetelor instalate este in /etc pentru configurari. exemplu: /etc/a
 ![Screenshot 2025-02-13 122604](https://github.com/user-attachments/assets/cc266809-96ad-4936-a1e0-357ee1b8d314)
 2. apache2 se poate reporni folosind comanda: systemctl restart apache2
 3. Verificam disponibilitatea site-urilor ![Screenshot 2025-02-13 124441](https://github.com/user-attachments/assets/21b29924-efbd-4a23-b10b-2c36f35f1965)
-![Screenshot 2025-02-13 124428](https://github.com/user-attachments/assets/2396ad19-6029-4138-b6ca-9b7fc2afa3a4)
+![Screenshot 2025-02-13 124428](https://github.com/user-attachments/assets/2396ad19-6029-4138-b6ca-9b7fc2afa3a4) ![image](https://github.com/user-attachments/assets/d4c7066c-2d56-4e11-985b-f18792d62cab)
+
 
 # Raspuns la intrebari
 1. pentru a descarca un fisier cu wget se poate adauga in consola comanda: wget + link URL
