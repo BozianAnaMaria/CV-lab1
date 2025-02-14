@@ -44,7 +44,8 @@ Destinatia pachetelor instalate este in /etc pentru configurari. exemplu: /etc/a
 1. uname -a va afisa:
 ![Screenshot 2025-02-13 122604](https://github.com/user-attachments/assets/cc266809-96ad-4936-a1e0-357ee1b8d314)
 2. apache2 se poate reporni folosind comanda: systemctl restart apache2
-3. Verificam disponibilitatea site-urilor ![Screenshot 2025-02-13 124441](https://github.com/user-attachments/assets/21b29924-efbd-4a23-b10b-2c36f35f1965)
+3. Verificam disponibilitatea site-urilor ![image](https://github.com/user-attachments/assets/e7f0ffb2-d050-4c70-adde-d3a279247f31)
+![image](https://github.com/user-attachments/assets/0e5038a0-dc7c-463d-92d2-3190bdb84ba2)
 ![Screenshot 2025-02-13 124428](https://github.com/user-attachments/assets/2396ad19-6029-4138-b6ca-9b7fc2afa3a4) ![image](https://github.com/user-attachments/assets/d4c7066c-2d56-4e11-985b-f18792d62cab)
 
 
@@ -55,11 +56,18 @@ Destinatia pachetelor instalate este in /etc pentru configurari. exemplu: /etc/a
 4. avantajele virtualizarii sunt: consolidare buna a serverului, izolarea datelor si flexibilitate.
 5. este necesara stabilirea orei sau a zonei de timp pe server pentru o sincronizare optima a datelor, sau stabilirea unor programe automate care se bazeaza pe timp.
 6. so are dimensiunea de 2 G.
-7. 
+7. Partitii:
+ /var – Deoarece contine fisiere de log, cache si baze de date temporare, izolarea acestuia previne umplerea accidentala a discului principal.
+ /tmp – Stocheaza fisiere temporare care pot consuma mult spatiu, iar separarea previne afectarea altor parti ale sistemului.
+ /home – Utilizatorii isi stocheaza fisierele aici, iar o partitie dedicata asigura ca datele utilizatorilor nu afecteaza spatiul sistemului de operare.
+ /usr/local (optional) – Daca se instaleaza multe programe in afara distributiei Debian, o partitie separata previne interferentele cu sistemul principal.
+ /var/mail (daca serverul este utilizat pentru e-mail) – Impiedica mesajele stocate sa ocupe spatiul destinat altor servicii.
+Acest tip de partitonare ajuta la gestionarea mai eficienta a spatiului, imbunatateste securitatea prin izolarea anumitor zone si previne situatiile in care un director suprasolicitat afecteaza intregul sistem.
 
 # Bibliografie
 https://www.sitepoint.com/does-site-need-database/
 https://stackoverflow.com/questions/45237991/how-to-change-mysql-mariadb-10-xx-default-port
 https://barrazacarlos.com/advantages-and-disadvantages-of-virtualization/
+https://www.debian.org/releases/bullseye/amd64/apcs03.en.html 
 
 # Toate drepturile imi apartin MIE, nu dati lui Denis.
