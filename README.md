@@ -56,12 +56,12 @@ Destinatia pachetelor instalate este in /etc pentru configurari. exemplu: /etc/a
 4. avantajele virtualizarii sunt: consolidare buna a serverului, izolarea datelor si flexibilitate.
 5. este necesara stabilirea orei sau a zonei de timp pe server pentru o sincronizare optima a datelor, sau stabilirea unor programe automate care se bazeaza pe timp.
 6. so are dimensiunea de 2 G.
-7. Partitii:
- /var – Deoarece contine fisiere de log, cache si baze de date temporare, izolarea acestuia previne umplerea accidentala a discului principal.
- /tmp – Stocheaza fisiere temporare care pot consuma mult spatiu, iar separarea previne afectarea altor parti ale sistemului.
- /home – Utilizatorii isi stocheaza fisierele aici, iar o partitie dedicata asigura ca datele utilizatorilor nu afecteaza spatiul sistemului de operare.
- /usr/local (optional) – Daca se instaleaza multe programe in afara distributiei Debian, o partitie separata previne interferentele cu sistemul principal.
- /var/mail (daca serverul este utilizat pentru e-mail) – Impiedica mesajele stocate sa ocupe spatiul destinat altor servicii.
+7. partitii:
+ /var – deoarece contine fisiere de log, cache si baze de date temporare, izolarea acestuia previne umplerea accidentala a discului principal.
+ /tmp – stocheaza fisiere temporare care pot consuma mult spatiu, iar separarea previne afectarea altor parti ale sistemului.
+ /home – utilizatorii isi stocheaza fisierele aici, iar o partitie dedicata asigura ca datele utilizatorilor nu afecteaza spatiul sistemului de operare.
+ /usr/local (optional) – daca se instaleaza multe programe in afara distributiei Debian, o partitie separata previne interferentele cu sistemul principal.
+ /var/mail (daca serverul este utilizat pentru e-mail) – impiedica mesajele stocate sa ocupe spatiul destinat altor servicii.
 Acest tip de partitonare ajuta la gestionarea mai eficienta a spatiului, imbunatateste securitatea prin izolarea anumitor zone si previne situatiile in care un director suprasolicitat afecteaza intregul sistem.
 
 # Bibliografie
@@ -69,5 +69,3 @@ https://www.sitepoint.com/does-site-need-database/
 https://stackoverflow.com/questions/45237991/how-to-change-mysql-mariadb-10-xx-default-port
 https://barrazacarlos.com/advantages-and-disadvantages-of-virtualization/
 https://www.debian.org/releases/bullseye/amd64/apcs03.en.html 
-
-# Toate drepturile imi apartin MIE, nu dati lui Denis.
