@@ -60,3 +60,5 @@ Destinatia pachetelor instalate este in /etc pentru configurari. exemplu: /etc/a
 https://www.sitepoint.com/does-site-need-database/
 https://stackoverflow.com/questions/45237991/how-to-change-mysql-mariadb-10-xx-default-port
 https://barrazacarlos.com/advantages-and-disadvantages-of-virtualization/
+
+# Toate drepturile imi apartin MIE, nu dati lui Denis.
